@@ -23,14 +23,16 @@ class ViewServiceProvider extends ServiceProvider
     public function register()
     {
     
+
         $container = $this->app->container;
+
         $container->share(View::class, function () use ($container){
-            $loader = new FilesystemLoader(__DIR__ .'/../../resources/views');
+            $loader = new FilesystemLoader($this->app::$ROOT_DIR.'/resources/views');
             $twig = new Environment($loader, ['debug' => true]);
             $twig->addExtension(new RoutePathExtension($container->get(Router::class)));
             $twig->addExtension(new CsrfExtension);
          
-            return new View($twig, $container->get('response'));
+            return new View($twig);
         });
 
     }

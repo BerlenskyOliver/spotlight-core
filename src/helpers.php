@@ -2,6 +2,7 @@
 
 use Laminas\Diactoros\Response\RedirectResponse;
 use Psr\Http\Message\ResponseInterface;
+use Spotlight\Core\Application;
 use Spotlight\Support\Env;
 use Spotlight\Support\View\View;
 
@@ -27,7 +28,7 @@ if(!function_exists('view')){
      */
     function view(string $url, array $variables = [])
     {
-        return View::render($url, $variables);
+        return (Application::$app->container->get(View::class))::render($url, $variables);
     }
 }
 

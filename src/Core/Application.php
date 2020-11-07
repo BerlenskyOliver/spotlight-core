@@ -5,6 +5,7 @@ namespace Spotlight\Core;
 use League\Container\Container;
 use League\Container\ReflectionContainer;
 use League\Route\Router;
+use Psr\Http\Message\ResponseInterface;
 use Spotlight\Providers\AppServiceProvider;
 use Spotlight\Providers\DatabaseServiceProvider;
 use Spotlight\Providers\RouteServiceProvider;
@@ -22,20 +23,25 @@ class Application
 
     public static Application $app;
 
+    public ResponseInterface $response;
+
     public function __construct($dir)
     {
         self::$ROOT_DIR = $dir;
         $this->container = new Container();
-        self::$app = $this;
         $this->loadApp();
+        self::$app = $this;
+        
         $this->registerBaseServiceProviders();
+        $this->router = $this->container->get(Router::class);
+        
     }
 
 
     public function loadApp()
     {
         $this->container->delegate(new ReflectionContainer);
-        $this->router = $this->container->get(Router::class);
+        
         Env::creatEnv(self::$ROOT_DIR);
     }
 

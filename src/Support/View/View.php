@@ -3,11 +3,14 @@ namespace Spotlight\Support\View;
 
 
 use Psr\Http\Message\ResponseInterface;
-use Symfony\Contracts\Service\ResetInterface;
+use Spotlight\Core\Application;
+use Spotlight\Support\View\Extensions\CsrfExtension;
+use Spotlight\Support\View\Extensions\RoutePathExtension;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
+use Twig\Loader\FilesystemLoader;
 
 class View
 {
@@ -24,14 +27,14 @@ class View
     /**
      * View constructor.
      * @param Environment $environment
-     * @param ResponseInterface $response
      */
-    public function __construct(Environment $environment, ResponseInterface $response)
+    public function __construct(Environment $environment)
     {
         self::$environment = $environment;
-        self::$response = $response;
+        self::$response = Application::$app->container->get('response');
     
     }
+
 
     /**
      * @param string $view
