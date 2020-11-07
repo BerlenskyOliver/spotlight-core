@@ -1,11 +1,11 @@
 <?php
 
-namespace Stellar\Providers;
+namespace Spotlight\Providers;
 
 
-use App\Support\View\Extensions\CsrfExtension;
-use App\Support\View\Extensions\RoutePathExtension;
-use App\Support\View\View;
+use Spotlight\Support\View\Extensions\CsrfExtension;
+use Spotlight\Support\View\Extensions\RoutePathExtension;
+use Spotlight\Support\View\View;
 use League\Route\Router;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;

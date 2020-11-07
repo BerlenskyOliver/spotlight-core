@@ -1,9 +1,9 @@
 <?php
 
-use App\Support\View\View;
 use Laminas\Diactoros\Response\RedirectResponse;
 use Psr\Http\Message\ResponseInterface;
-
+use Spotlight\Support\Env;
+use Spotlight\Support\View\View;
 
 if(!function_exists('redirect')){
 
@@ -40,6 +40,6 @@ if(!function_exists('env')){
      */
     function env(string $name, $defaultKeys = null)
     {
-        return \App\Support\Env::get($name, $defaultKeys);
+        return Env::get($name, $defaultKeys);
     }
 }

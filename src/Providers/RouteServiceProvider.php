@@ -1,6 +1,6 @@
 <?php
 
-namespace Stellar\Providers;
+namespace Spotlight\Providers;
 
 use League\Route\Router;
 

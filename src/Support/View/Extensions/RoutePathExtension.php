@@ -1,6 +1,6 @@
 <?php
 
-namespace Stellar\Support\View\Extensions;
+namespace Spotlight\Support\View\Extensions;
 
 use League\Route\Router;
 use Twig\Extension\AbstractExtension;

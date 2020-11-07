@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Stellar\Providers;
+namespace Spotlight\Providers;
 
 
 use Laminas\Diactoros\Response;

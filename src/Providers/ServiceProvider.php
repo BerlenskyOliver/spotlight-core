@@ -1,9 +1,9 @@
 <?php
  
-namespace Stellar\Providers;
+namespace Spotlight\Providers;
 
 use League\Container\ServiceProvider\AbstractServiceProvider;
-use Stellar\Core\Application;
+use Spotlight\Core\Application;
 
 class ServiceProvider extends AbstractServiceProvider
 {

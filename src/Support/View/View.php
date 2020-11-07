@@ -1,5 +1,5 @@
 <?php
-namespace Stellar\Support\View;
+namespace Spotlight\Support\View;
 
 
 use Psr\Http\Message\ResponseInterface;

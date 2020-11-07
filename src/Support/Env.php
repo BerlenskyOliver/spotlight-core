@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Stellar\Support;
+namespace Spotlight\Support;
 
 
 use Dotenv\Dotenv;

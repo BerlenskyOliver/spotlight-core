@@ -1,6 +1,6 @@
 <?php
 
-namespace Stellar\Providers;
+namespace Spotlight\Providers;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;

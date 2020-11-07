@@ -1,6 +1,6 @@
 <?php
 
-namespace Stellar\Support\View\Extensions;
+namespace Spotlight\Support\View\Extensions;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;

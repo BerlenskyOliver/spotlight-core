@@ -1,15 +1,15 @@
 <?php
 
-namespace Stellar\Core;
+namespace Spotlight\Core;
 
-use App\Providers\ViewServiceProvider;
 use League\Container\Container;
 use League\Container\ReflectionContainer;
 use League\Route\Router;
-use Stellar\Providers\AppServiceProvider;
-use Stellar\Providers\DatabaseServiceProvider;
-use Stellar\Providers\RouteServiceProvider;
-use Stellar\Support\Env;
+use Spotlight\Providers\AppServiceProvider;
+use Spotlight\Providers\DatabaseServiceProvider;
+use Spotlight\Providers\RouteServiceProvider;
+use Spotlight\Providers\ViewServiceProvider;
+use Spotlight\Support\Env;
 
 class Application
 {
