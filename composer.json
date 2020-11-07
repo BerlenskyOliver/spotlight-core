@@ -1,0 +1,40 @@
+{
+    "name": "stellar/framework",
+    "description": "A scafollding app for php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Berlensky Oliver",
+            "email": "berlenskyoliver99@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "twig/twig": "^3.0",
+        "league/route": "^4.5",
+        "doctrine/orm": "^2.7",
+        "laminas/laminas-diactoros": "^2.3",
+        "laminas/laminas-httphandlerrunner": "^1.2",
+        "league/container": "^3.3",
+        "vlucas/phpdotenv": "^5.1",
+        "ext-pdo": "*"
+    },
+     "autoload": {
+        "psr-4": {
+            "Stellar\\": "src/"
+        },
+      
+        "files" : [
+            "src/helpers.php"
+        ]
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.9",
+        "symfony/var-dumper": "^5.1",
+        "filp/whoops": "^2.7",
+        "phpunit/phpunit": "^9.3",
+        "phpstan/phpstan": "^0.12.40"
+    }
+}
